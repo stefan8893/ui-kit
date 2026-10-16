@@ -4,8 +4,6 @@ A dedicated workspace for learning **React**, mastering **shadcn/ui**, and build
 
 This project serves as a centralized UI library. It leverages the power of **Vite**, **Tailwind CSS**, and **Radix UI** primitives to create accessible and highly customizable components.
 
----
-
 ## 🛠 Tech Stack
 
 - **Framework:** [React](https://reactjs.org/) (Vite)
