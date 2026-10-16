@@ -14,6 +14,6 @@ This project serves as a centralized UI library. It leverages the power of **Vit
 
 ## 🏗 Project Goals
 
-- [x] **Learn shadcn/ui:** Understanding the "copy-paste" philosophy vs. traditional NPM packages.
-- [x] **Design Consistency:** Creating a unique visual identity using Tailwind CSS v4's `@theme` engine and native CSS variables.
+- [ ] **Learn shadcn/ui:** Understanding the "copy-paste" philosophy vs. traditional NPM packages.
+- [ ] **Design Consistency:** Creating a unique visual identity using Tailwind CSS v4's `@theme` engine and native CSS variables.
 - [ ] **Reusable Library:** Exporting these styles to be used in secondary projects.
