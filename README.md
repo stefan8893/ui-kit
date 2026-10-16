@@ -4,10 +4,6 @@ A dedicated workspace for learning **React**, mastering **shadcn/ui**, and build
 
 This project serves as a centralized UI library. It leverages the power of **Vite**, **Tailwind CSS**, and **Radix UI** primitives to create accessible and highly customizable components.
 
-## 🚀 Live Demo
-
-Check out the components in action: [https://stefan8893.github.io/ui-kit/](https://stefan8893.github.io/ui-kit/)
-
 ---
 
 ## 🛠 Tech Stack
