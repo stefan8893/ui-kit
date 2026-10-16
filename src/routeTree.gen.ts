@@ -9,20 +9,20 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SettingsRouteRouteImport } from './routes/settings/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SettingsRouteRouteImport } from './routes/settings/route'
 import { Route as SettingsIndexRouteImport } from './routes/settings/index'
-import { Route as SettingsLanguageRegionRouteImport } from './routes/settings/language-region'
 import { Route as SettingsAppearanceRouteImport } from './routes/settings/appearance'
+import { Route as SettingsLanguageRegionRouteImport } from './routes/settings/language-region'
 
-const SettingsRouteRoute = SettingsRouteRouteImport.update({
-  id: '/settings',
-  path: '/settings',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRouteRoute = SettingsRouteRouteImport.update({
+  id: '/settings',
+  path: '/settings',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SettingsIndexRoute = SettingsIndexRouteImport.update({
@@ -30,14 +30,14 @@ const SettingsIndexRoute = SettingsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => SettingsRouteRoute,
 } as any)
-const SettingsLanguageRegionRoute = SettingsLanguageRegionRouteImport.update({
-  id: '/language-region',
-  path: '/language-region',
-  getParentRoute: () => SettingsRouteRoute,
-} as any)
 const SettingsAppearanceRoute = SettingsAppearanceRouteImport.update({
   id: '/appearance',
   path: '/appearance',
+  getParentRoute: () => SettingsRouteRoute,
+} as any)
+const SettingsLanguageRegionRoute = SettingsLanguageRegionRouteImport.update({
+  id: '/language-region',
+  path: '/language-region',
   getParentRoute: () => SettingsRouteRoute,
 } as any)
 
@@ -88,18 +88,18 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/settings': {
-      id: '/settings'
-      path: '/settings'
-      fullPath: '/settings'
-      preLoaderRoute: typeof SettingsRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/settings/': {
@@ -109,18 +109,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SettingsIndexRouteImport
       parentRoute: typeof SettingsRouteRoute
     }
-    '/settings/language-region': {
-      id: '/settings/language-region'
-      path: '/language-region'
-      fullPath: '/settings/language-region'
-      preLoaderRoute: typeof SettingsLanguageRegionRouteImport
-      parentRoute: typeof SettingsRouteRoute
-    }
     '/settings/appearance': {
       id: '/settings/appearance'
       path: '/appearance'
       fullPath: '/settings/appearance'
       preLoaderRoute: typeof SettingsAppearanceRouteImport
+      parentRoute: typeof SettingsRouteRoute
+    }
+    '/settings/language-region': {
+      id: '/settings/language-region'
+      path: '/language-region'
+      fullPath: '/settings/language-region'
+      preLoaderRoute: typeof SettingsLanguageRegionRouteImport
       parentRoute: typeof SettingsRouteRoute
     }
   }
